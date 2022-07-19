@@ -184,18 +184,94 @@
 # print(grouping_dictionary(colors))
 
 #14 nested dictionary
-def nested_dictionary(l1, l2, l3):
-     result = [{x: {y: z}} for (x, y, z) in zip(l1, l2, l3)]
-     return result
+# def nested_dictionary(l1, l2, l3):
+#      result = [{x: {y: z}} for (x, y, z) in zip(l1, l2, l3)]
+#      return result
+# student_id = ["1", "2", "3"] 
+# student_name = ["khushdeep", "muskandeep ", "prabhdeep"] 
+# student_grade = [95,96,94]
+# print("Original strings:")
+# print(student_id)
+# print(student_name)
+# print(student_grade)
+# print("\nNested dictionary:")
+# ch='a'
+# print(nested_dictionary(student_id, student_name, student_grade))
 
-student_id = ["S001", "S002", "S003", "S004"] 
-student_name = ["Adina Park", "Leyton Marsh", "Duncan Boyle", "Saim Richards"] 
-student_grade = [85, 98, 89, 92]
-print("Original strings:")
-print(student_id)
-print(student_name)
-print(student_grade)
-print("\nNested dictionary:")
-ch='a'
-print(nested_dictionary(student_id, student_name, student_grade))
+#15 Python program to check if a set is a subset of another set.
+# print("Check if a set is a subset of another set, using comparison operators and issubset():\n")
+# setx = set(["a", "b","c"])
+# sety = set(["a", "b"])
+# setz = set(["a"])
+# print("x: ",setx)
+# print("y: ",sety)
+# print("z: ",setz,"\n")
+# print("If x is subset of y")
+# print(setx <= sety)
+# print(setx.issubset(sety))
+# print("If y is subset of x")
+# print(sety <= setx)
+# print(sety.issubset(setx))
+# print("\nIf y is subset of z")
+# print(sety <= setz)
+# print(sety.issubset(setz))
+# print("If z is subset of y")
+# print(setz <= sety)
+# print(setz.issubset(sety))
+
+#16 program to create a symmetric difference and set difference
+# set1=set([1,2,5,7,9,1])
+# set2=set([1,5,9,5,3,6])
+# print('sets:')
+# print('set1:',set1)
+# print('set2:',set2)
+# d1=set1.symmetric_difference(set2)
+# print('symmetric difference of set1-set2:')
+# print(d1)
+# d2=set2.symmetric_difference(set1)
+# print('symmetric difference of set2-set1:')
+# print(d2)
+# d3=set1.difference(set2)
+# print('difference of set1 -set2:')
+# print(d3)
+# d4=set2.difference(set1)
+# print('difference of set2-set1:')
+# print(d4)
+
+#17 program to remove an empty tuple(s) from a list of tuple
+# def remove(tuples):
+#     tuples=[t for t in tuples if t]
+#     return tuples
+# tuples=[(),('1'),('2','3'),(),('hello','khush')]
+# print(tuples)
+# print(remove(tuples))
+
+#18 program to calculate the average value of the numbers in a given tuple of tuples
+# def avg(num):
+#     sum1=[sum(x) for x in zip(*num)]
+#     print(sum1)
+#     result=[sum(x)/len(x) for x in zip(*num)]
+#     return result
+# num=((10,20,30),(25,21,29),(20,40,25))
+# print(num)
+# print('average value of numbers of tuple of tuples:')
+# print(avg(num))
+
+#19 program to check the validity of a password (input from users)
+l,u,d,c=0,0,0,0
+password=input('enter the password:')
+if (len(password)>=6 and len(password)<=16):
+    for i in password:
+        if(i.islower()):
+            l+=1
+        if(i.isupper()):
+            u+=1
+        if(i.isdigit()):
+            d+=1
+        if(i=='@'or i=='$' or i=='#'):
+            c+=1
+if(l>=1 and u>=1 and d>=1 and c>=1 and l+u+d+c==len(password)):
+    print('valid password')
+else:
+    print('invalid password')
 
