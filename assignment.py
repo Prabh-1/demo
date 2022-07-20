@@ -161,6 +161,9 @@ else:
    print(a)
 
 # 19program to get the last part of a string before a specified character
+str1 = 'hello-everyone/be happy'
+print(str1.rsplit('/', 1)[0])
+print(str1.rsplit('-', 1)[0])
 
 
 # 20Python function to reverses a string if it's length is a multiple of 4
