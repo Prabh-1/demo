@@ -12,7 +12,7 @@ print(name)
 a_fun()
 print(name)
 
-# 2
+#2
 a = 10
 def f():
  	print ('Inside f() : ', a)
